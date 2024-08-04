@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>صفحة البداية</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            color: #343a40;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        
+        .logo {
+            max-width: 250px;
+            max-height: 250px;
+            opacity: 0; /* Initially hidden */
+            animation: fadeIn 2s ease-in-out forwards; /* Animation with forwards to keep the final state */
+        }
+        
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container text-center">
+        <img class="logo" src="ray.png" alt="Logo">
+    </div>
+
+    <script>
+        setTimeout(function() {
+            window.location.href = "index.html"; // رابط الصفحة الرئيسية
+        }, 5000); // 5000 مللي ثانية = 5 ثوانٍ
+    </script>
+</body>
+
+</html>
