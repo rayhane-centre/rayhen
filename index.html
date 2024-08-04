@@ -500,39 +500,38 @@
             /* Marge à gauche pour l'espace entre le texte et les points de suspension */
         }
         
-        .hero {
-            height: 100vh;
-            /* Set height to full viewport height */
-            position: relative;
-            /* Ensure relative positioning for absolute elements */
-            overflow: hidden;
-            /* Hide overflow to ensure video doesn't overflow */
-        }
-        
-        .hero-video {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            /* Place behind other content */
-        }
-        
-        .hero-video video {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            /* Cover entire container */
-        }
-        /* Media Query for Phones */
-        
-        @media (max-width: 768px) {
-            .hero-video video {
-                object-fit: cover;
-                /* Maintain cover for mobile */
-            }
-        }
+      .hero {
+    height: 100vh; /* Set the hero section to full viewport height */
+    position: relative; /* Ensure relative positioning for absolute elements */
+    overflow: hidden; /* Hide overflow to prevent video overflow */
+}
+
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('ll.jpg'); /* Specify your background image URL here */
+    background-size: cover; /* Cover the entire hero section */
+    z-index: -1; /* Place the background behind other content */
+}
+
+.hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Ensure video is behind other content */
+}
+
+.hero-video video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cover the entire container */
+}
+
     </style>
 </head>
 
