@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مركز الريحان للتكوين والتأهيل </title>
+    <meta name="description" content="Sports News and Live Scores">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="ray.png">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9568912999082528" crossorigin="anonymous"></script>
+    <style>
+        /* Your CSS styles here */
+        /* General styles */
+        /* General styles */
+        
+        body {
+            font-family: 'Cairo', Arial, sans-serif;
+            background-color: #f8f9fa;
+            color: #343a40;
+            transition: background-color 0.5s, color 0.5s;
+            position: relative;
+            /* Ensure body has relative position for absolute positioning */
+        }
+        
+        .arabic-date {
+            font-family: 'Times New Roman', Times, serif;
+            /* Specify different font for date */
+        }
+        
+        .navbar {
+            background-image: url('ll.jpg');
+        }
+        
+        .navbar-brand img {
+            width: 90px;
+            /* Adjust logo size for larger screens */
+        }
+        
+        .navbar-dark .navbar-toggler {
+            border: none;
+            color: white;
+        }
+        
+        .navbar-dark .navbar-toggler-icon {
+            color: white;
+            width: 24px;
+            height: 17px;
+        }
+        
+        .navbar-dark .navbar-nav .nav-link {
+            color: #000;
+            padding: 10px 15px;
+            transition: background-color 0.3s;
+            text-align: right;
+            /* Right-align text */
+        }
+        
+        .navbar-dark .navbar-nav .nav-link:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        /* Fullscreen menu styles */
+        
+        .fullscreen-menu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            /* Semi-transparent black background */
+            z-index: 1000;
+            /* Ensure it's above other content */
+            display: none;
+            /* Initially hidden */
+            overflow-y: auto;
+            /* Enable scrolling */
+        }
+        
+        .fullscreen-menu.open {
+            display: block;
+            /* Display when open */
+        }
+        
+        .fullscreen-menu-content {
+            position: absolute;
+            top: 6px;
+            /* Adjust as needed */
+            right: 10px;
+            /* Adjust as needed */
+            transform: translate(0, 0);
+            /* Adjust as needed */
+            text-align: right;
+            /* Right-align text */
+        }
+        
+        .fullscreen-menu-content ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        .fullscreen-menu-content ul li {
+            margin-bottom: 10px;
+        }
+        
+        .fullscreen-menu-content ul li a {
+            color: #fff;
+            font-size: 24px;
+            text-decoration: none;
+            transition: color 0.3s;
+            display: block;
+            padding: 10px;
+        }
+        
+        .fullscreen-menu-content ul li a:hover {
+            color: #ccc;
+        }
+        
+        .close-btn {
+            position: absolute;
+            top: 2px;
+            /* تعديل حسب الحاجة */
+            left: 10px;
+            /* تعديل لتحديد الزاوية اليسرى */
+            color: #fff;
+            /* تعديل لون النص */
+            font-size: 50px;
+            /* تعديل حجم الخط */
+            cursor: pointer;
+        }
+        
+        body[dir="rtl"] {
+            font-family: 'Cairo', Arial, sans-serif;
+        }
+        
+        .live-scores-section {
+            padding: 50px 0;
+            background-color: #f8f9fa;
+        }
+        /* Dark Mode Styles */
+        
+        body.dark-mode {
+            background-color: #22262a;
+            color: #fff;
+        }
+        
+        body.dark-mode .navbar {
+            background-color: #0b0d0e;
+        }
+        
+        body.dark-mode .navbar-dark .navbar-nav .nav-link {
+            color: #fff;
+        }
+        
+        body.dark-mode .navbar-dark .navbar-nav .nav-link:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        /* Media Query for Mobile Devices */
+        
+        @media (max-width: 768px) {
+            .navbar-brand img {
+                width: 40px;
+            }
+        }
+        
+        .navbar-dark .navbar-nav .nav-link:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        
+        .hero {
+            background-color: white;
+            background-size: cover;
+            background-position: center;
+            color: #000;
+            text-align: center;
+            padding: 80px 0;
+        }
+        
+        @media (max-width: 768px) {
+            .hero {
+                padding: 20px 0;
+            }
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+        }
+        
+        .btn-primary {
+            background-color: #dc3545;
+            border-color: #dc3545;
+        }
+        
+        .btn-primary:hover {
+            background-color: #c82333;
+            border-color: #bd2130;
+        }
+        
+        .feature {
+            background-color: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border: 1px solid #dee2e6;
+            border-radius: 5px;
+            text-align: center;
+        }
+        
+        .feature img {
+            max-width: 50%;
+            height: auto;
+            border-radius: 5px;
+        }
+        /* Section for Social Icons */
+        
+        .social-icons {
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+        .social-icons a {
+            font-size: 24px;
+            margin: 0 10px;
+            color: #343a40;
+            transition: color 0.3s;
+        }
+        
+        .authors-section {
+            background-image: url('ll.jpg');
+            color: black;
+            padding: 50px 0;
+        }
+        
+        .author {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .author img {
+            width: auto;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+            border: 4px solid #fff;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .author h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: black;
+        }
+        
+        .author p {
+            font-size: 1rem;
+            margin-bottom: 20px;
+            color: black;
+        }
+        
+        @media (max-width: 768px) {
+            .authors-section {
+                background-image: url('ll.jpg');
+                color: #fff;
+                padding: 50px 0;
+            }
+            .author {
+                text-align: center;
+                margin-bottom: 30px;
+            }
+            .author img {
+                border-radius: 50%;
+                object-fit: cover;
+                margin-bottom: 20px;
+                border: 4px solid #fff;
+                box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+                width: 90px;
+                /* Fixed width for the images */
+                height: 90px;
+                /* Fixed height for the images */
+                margin-left: 15px;
+                /* Space between image and text */
+            }
+            .author h3 {
+                font-size: 1.5rem;
+                margin-bottom: 10px;
+            }
+            .author p {
+                font-size: 1rem;
+                margin-bottom: 20px;
+            }
+            .author1 {
+                text-align: center;
+                margin-bottom: 30px;
+            }
+            .author img {
+                border-radius: 50%;
+                object-fit: cover;
+                margin-bottom: 20px;
+                border: 4px solid #fff;
+                box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+                width: 140px;
+                /* Fixed width for the images */
+                height: 140px;
+                /* Fixed height for the images */
+                margin-left: 15px;
+                /* Space between image and text */
+            }
+            .author h31 {
+                font-size: 1.5rem;
+                margin-bottom: 10px;
+            }
+            .author p1 {
+                font-size: 1rem;
+                margin-bottom: 20px;
+            }
+        }
+        /* Dark Mode Styles */
+        
+        body.dark-mode {
+            background-color: #343a40;
+            color: #fff;
+        }
+        
+        body.dark-mode .navbar {
+            background-color: #212529;
+        }
+        
+        body.dark-mode .navbar-dark .navbar-nav .nav-link {
+            color: #fff;
+        }
+        
+        body.dark-mode .navbar-dark .navbar-nav .nav-link:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        
+        body.dark-mode .hero {
+            background-color: #343a40;
+            color: #fff;
+        }
+        
+        body.dark-mode .btn-primary {
+            background-color: #dc3545;
+            border-color: #dc3545;
+        }
+        
+        body.dark-mode .btn-primary:hover {
+            background-color: #c82333;
+            border-color: #bd2130;
+        }
+        
+        body.dark-mode .feature {
+            background-color: #424242;
+            border-color: #757575;
+            color: #fff;
+        }
+        
+        body.dark-mode .social-icons a {
+            color: #fff;
+        }
+        
+        body.dark-mode .authors-section {
+            background-color: #212529;
+            color: #fff;
+        }
+        /* Blogs Section */
+        
+        .blogs-section {
+            padding: 60px 0;
+            background-color: ;
+            /* Gris avec 50% de transparence */
+            text-align: center;
+        }
+        
+        .blog {
+            margin-bottom: 30px;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            background-color: rgba(255, 255, 0, 0.5);
+            background-color: hsla(0, 0%, 0%, 0);
+        }
+        
+        .blog img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            transition: transform 0.3s;
+        }
+        
+        .blog h3 {
+            margin-top: 10px;
+            font-size: 1.5rem;
+            color: black;
+        }
+        
+        .blog:hover img {
+            transform: scale(1.1);
+        }
+        /* Footer Section */
+        
+        footer {
+            color: #fff;
+            padding: 30px 0;
+            text-align: center;
+        }
+        
+        footer p {
+            margin-bottom: 0;
+        }
+        
+        .center-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            /* Center text horizontally within .center-container */
+        }
+        
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Cairo', Arial, sans-serif;
+        }
+        /* Add this to your CSS file or <style> block */
+        
+        .btn-white {
+            background-color: #343a40;
+            /* White background */
+            color: white;
+            /* Black text color */
+            border: 1px solid black;
+            /* Black border */
+            padding: 10px 20px;
+            /* Padding for the button */
+            text-align: center;
+            /* Center the text */
+            text-decoration: none;
+            /* Remove underline from text */
+            display: inline-block;
+            /* Inline-block display */
+            font-size: 16px;
+            /* Font size */
+            cursor: pointer;
+            /* Pointer cursor on hover */
+            border-radius: 5px;
+            /* Rounded corners */
+            transition: background-color 0.3s, color 0.3s;
+            /* Smooth transition */
+        }
+        
+        .btn-white:hover {
+            background-color: white;
+            /* Black background on hover */
+            color: black;
+            /* White text color on hover */
+        }
+        /* Base styles for news container */
+        
+        .news {
+            display: flex;
+            /* Arrange items in a column */
+            flex-direction: column;
+            gap: 20px;
+            /* Space between news items */
+            background-image: url('https://scontent.forn3-2.fna.fbcdn.net/v/t39.30808-6/452081018_897652215726337_8826272997965719878_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=cc71e4&_nc_eui2=AeHQTpcFBb1C0sQ-PV-dbBoq_bhv0sTWZTf9uG_SxNZlN1cgt1Dti_ieXB9hePZt93ytO88QtLlh263FCqLMilYO&_nc_ohc=F3VPJNbI1w8Q7kNvgGl-xWT&_nc_ht=scontent.forn3-2.fna&oh=00_AYAHFbhglA7kJMPYz3s4mQmFVnENiJXDZAhcoV6AEqH6nQ&oe=66B5707A');
+        }
+        
+        .custom-icon {
+            width: 24px;
+            /* Adjust as per your icon size */
+            height: 24px;
+            margin-left: 10px;
+            /* Adjust spacing */
+        }
+        
+        .ellipsis {
+            /* Style pour les points de suspension */
+            font-size: 24px;
+            /* Taille de police (ajustez selon vos besoins) */
+            color: #fff;
+            /* Couleur du texte */
+            margin-left: 5px;
+            /* Marge à gauche pour l'espace entre le texte et les points de suspension */
+        }
+        
+        .hero {
+            height: 100vh;
+            /* Set height to full viewport height */
+            position: relative;
+            /* Ensure relative positioning for absolute elements */
+            overflow: hidden;
+            /* Hide overflow to ensure video doesn't overflow */
+        }
+        
+        .hero-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            /* Place behind other content */
+        }
+        
+        .hero-video video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            /* Cover entire container */
+        }
+        /* Media Query for Phones */
+        
+        @media (max-width: 768px) {
+            .hero-video video {
+                object-fit: cover;
+                /* Maintain cover for mobile */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark">
+            <div class="container">
+                <div class="navbar-brand mr-auto">
+                    <img src="ray.png" alt="MCA Logo">
+                </div>
+                <button class="navbar-toggler" type="button" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Fullscreen Menu -->
+    <div class="fullscreen-menu" id="fullscreenMenu">
+        <span class="close-btn">&times;</span><br><br>
+        <div class="fullscreen-menu-content">
+            <ul>
+                <br><br>
+                <li><a href="index.html">الصفحة الرئيسية</a></li>
+                <li>
+                    <a href="news1.html"></a>
+                </li>
+                <li>
+                    <a href="first1.html"></a>
+                </li>
+                <li>
+                    <a href="reserve1.html"></a>
+                </li>
+                <li>
+                    <a href="histoir1.html"></a>
+                </li>
+                <li>
+                    <a href="idr1.html"></a>
+                </li>
+                <li>
+                    <a href="live1.html"></a>
+                </li>
+                <li>
+                    <a href="video1.html"></a>
+                </li>
+                <li><a href="contac1.html">تواصل معنا</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-video">
+            <video autoplay muted loop playsinline>
+                <source src="vv.mp4" type="video/mp4">
+                <!-- Provide fallback for older browsers -->
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <br>
+        <section class="image-before-icons">
+            <div class="container">
+                <div class="row">
+                    <div class="col text-center">
+                        <img src="mca2.jpg" class="img-fluid" alt="Image Description">
+                    </div>
+                </div>
+            </div>
+        </section><br>
+
+
+        <section class="live-scores-section">
+            <div class="container">
+
+            </div>
+        </section>
+        <br>
+        <section class="image-before-icons">
+            <div class="container">
+                <div class="row">
+                    <div class="col text-center">
+                        <img src="site1.jpg" class="img-fluid" alt="Image Description">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="social-icons">
+            <div class="container">
+                <a href="https://www.facebook.com/rayhane.center/"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/rayhane.center/"><i class="fab fa-instagram"></i></a>
+                <a href="mailto:rayhane.centre@gmail.com"><i class="fas fa-envelope"></i></a>
+                <a href="tel:0795928687"><i class="fas fa-phone-alt"></i></a>
+            </div>
+        </section>
+
+        <section class="authors-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <div class="author">
+                            <a href="https://www.facebook.com/abdouoooooooooooooooooooooooooooooooooooooooo/?locale=fr_FR" target="_blank">
+                                <img src="dev.png" class="img-fluid1" alt="Développeur">
+                            </a>
+                            <h3>Iliesso</h3>
+                            <p>مطور</p>
+                        </div>
+                        <footer class="text-center py-4">
+                            <p>&copy; 2024 Mouloudia Actualités. جميع الحقوق محفوظة.</p>
+                        </footer>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- Bootstrap JS, Popper.js, and jQuery -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <!-- Custom JS -->
+        <script>
+            // Script to toggle dark mode
+            const logo = document.querySelector('.navbar-brand img');
+            const body = document.body;
+            const viewMenu = document.querySelector('.navbar-collapse');
+
+            logo.addEventListener('click', function() {
+                body.classList.toggle('dark-mode');
+
+            });
+            // JavaScript to toggle fullscreen menu
+            $(document).ready(function() {
+                $('.navbar-toggler').click(function() {
+                    $('#fullscreenMenu').toggleClass('open');
+                });
+
+                // Close the menu when clicking outside of it
+                $(document).mouseup(function(e) {
+                    var container = $("#fullscreenMenu");
+                    if (!container.is(e.target) && container.has(e.target).length === 0) {
+                        container.removeClass('open');
+                    }
+                });
+
+                // Close the menu when close button is clicked
+                $('.close-btn').click(function() {
+                    $('#fullscreenMenu').removeClass('open');
+                });
+            });
+            // Remove previously mentioned dark mode toggle button event
+            const toggleButton = document.querySelector('.btn-primary');
+            toggleButton.parentNode.removeChild(toggleButton);
+        </script>
+</body>
+
+</html>
+
+</html>

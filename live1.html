@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horloge Numérique - Heure en Algérie</title>
+    <style>
+        /* CSS styles for clock and animation */
+        
+        .clock-face {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #333;
+            color: #fff;
+            font-size: 3rem;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        
+        .digit {
+            padding: 0 10px;
+        }
+        
+        .divider {
+            opacity: 0.5;
+        }
+        /* Animation for myDIV */
+        
+        .myDIV {
+            width: 300px;
+            height: 200px;
+            background: red;
+            animation: mymove 5s infinite;
+        }
+        
+        @keyframes mymove {
+            from {
+                background-color: red;
+            }
+            to {
+                background-color: blue;
+            }
+        }
+    </style>
+</head>
+
+<myDIV>
+    <!-- Clock display -->
+    <div class="clock">
+        <div class="clock-face">
+            <div class="digit hours">00</div>
+            <div class="divider">:</div>
+            <div class="digit minutes">00</div>
+            <div class="divider">:</div>
+            <div class="digit seconds">00</div>
+        </div>
+    </div>
+
+    <!-- JavaScript for updating the clock -->
+    <script>
+        function updateClock() {
+            // Create a new date instance for the current time
+            let now = new Date();
+
+            // Define the time offset for Algeria (UTC+1 for standard time)
+            let offset = 1; // UTC+1 for standard time in Algeria
+
+            // Add the offset to get the correct time in Algeria
+            now.setHours(now.getHours() + offset);
+
+            // Extract hours, minutes, and seconds and format with leading zero if necessary
+            let hours = now.getHours().toString().padStart(2, '0');
+            let minutes = now.getMinutes().toString().padStart(2, '0');
+            let seconds = now.getSeconds().toString().padStart(2, '0');
+
+            // Update HTML elements with the new values
+            document.querySelector('.hours').textContent = hours;
+            document.querySelector('.minutes').textContent = minutes;
+            document.querySelector('.seconds').textContent = seconds;
+        }
+
+        // Update the clock every second
+        setInterval(updateClock, 1000);
+
+        // Initial call to display the clock immediately when the page loads
+        updateClock();
+    </script>
+</myDIV>
+
+</html>
