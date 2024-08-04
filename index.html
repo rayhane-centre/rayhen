@@ -500,21 +500,22 @@
             /* Marge à gauche pour l'espace entre le texte et les points de suspension */
         }
         
-      .hero {
-    height: 100vh; /* Set the hero section to full viewport height */
-    position: relative; /* Ensure relative positioning for absolute elements */
-    overflow: hidden; /* Hide overflow to prevent video overflow */
+   .hero {
+    height: 100vh; /* Hauteur de la section héros égale à la hauteur de l'écran */
+    position: relative; /* Position relative pour permettre le positionnement absolu des éléments internes */
+    overflow: hidden; /* Masquer le débordement pour empêcher les vidéos de déborder */
+         background-image: url('rayy.jpg'); /* URL de l'image de fond */
 }
 
 .hero-background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('rayy.jpg'); /* Specify your background image URL here */
-    background-size: cover; /* Cover the entire hero section */
-    z-index: -1; /* Place the background behind other content */
+    position: absolute; /* Position absolue pour placer l'image de fond */
+    top: 0; /* Alignement en haut de la section héros */
+    left: 0; /* Alignement à gauche de la section héros */
+    width: 100%; /* Largeur de l'image de fond sur toute la largeur de la section */
+    height: 100%; /* Hauteur de l'image de fond sur toute la hauteur de la section */
+    background-image: url('rayy.jpg'); /* URL de l'image de fond */
+    background-size: cover; /* Redimensionner l'image pour couvrir toute la section */
+    z-index: -1; /* Placer l'image de fond derrière le contenu principal */
 }
 
 
