@@ -174,30 +174,10 @@
             background-color: rgba(255, 255, 255, 0.1);
         }
         
-        .hero {
-            background-color: white;
-            background-size: cover;
-            background-position: center;
-            color: #000;
-            text-align: center;
-            padding: 80px 0;
-        }
+      
         
         @media (max-width: 768px) {
-            .hero {
-                padding: 20px 0;
-            }
-        }
-        
-        .hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 20px;
-        }
-        
-        .hero p {
-            font-size: 1.5rem;
-            margin-bottom: 30px;
-        }
+            
         
         .btn-primary {
             background-color: #dc3545;
@@ -500,24 +480,40 @@
             /* Marge à gauche pour l'espace entre le texte et les points de suspension */
         }
         
-   .hero {
-    height: 70vh; /* Hauteur de la section héros égale à la hauteur de l'écran */
-    position: relative; /* Position relative pour permettre le positionnement absolu des éléments internes */
-    overflow: hidden; /* Masquer le débordement pour empêcher les vidéos de déborder */
-         background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9uQQkqU1sIb-mX4Y-4YrFCBNXRrbDrRadYw&s'); /* URL de l'image de fond */
+ .hero {
+    height: 70vh; /* Height of the hero section, equal to 70% of the viewport height */
+    position: relative; /* Relative positioning for absolute child elements */
+    overflow: hidden; /* Hide overflow to prevent background image overflow */
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9uQQkqU1sIb-mX4Y-4YrFCBNXRrbDrRadYw&s'); /* Background image URL */
+    background-size: cover; /* Resize background image to cover entire section */
+    background-position: center; /* Center the background image */
+    color: #ffffff; /* Text color for the hero section */
+    text-align: center; /* Center align text content */
+    display: flex; /* Use flexbox for vertical and horizontal centering */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
 }
 
 .hero-background {
-    position: absolute; /* Position absolue pour placer l'image de fond */
-    top: 0; /* Alignement en haut de la section héros */
-    left: 0; /* Alignement à gauche de la section héros */
-    width: 100%; /* Largeur de l'image de fond sur toute la largeur de la section */
-    height: 100%; /* Hauteur de l'image de fond sur toute la hauteur de la section */
-    background-image: url('rayy.jpg'); /* URL de l'image de fond */
-    background-size: cover; /* Redimensionner l'image pour couvrir toute la section */
-    z-index: -1; /* Placer l'image de fond derrière le contenu principal */
+    position: absolute; /* Absolute positioning for the background layer */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('rayy.jpg'); /* Background image URL */
+    background-size: cover; /* Resize background image to cover */
+    z-index: -1; /* Place the background behind other content */
 }
 
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
 
     </style>
 </head>
@@ -561,11 +557,11 @@
             </ul>
         </div>
     </div>
-  <section class="hero">
+ <section class="hero">
     <div class="hero-background"></div>
     <div class="container">
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-12 text-center">
                 <h1 class="display-4">مركز الريحان للتكوين والتأهيل</h1>
                 <p class="lead">مرحباً بكم في موقعنا الإلكتروني</p>
                 <a href="#" class="btn btn-primary btn-lg">المزيد</a>
@@ -573,6 +569,7 @@
         </div>
     </div>
 </section>
+
 
 
 
