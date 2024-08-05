@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مدرسة الريحان المعتمدة للتكوين المهني</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="ray.png">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Inline Styles -->
+    <style>
+        /* Global styles */
+        
+        .hero,
+        .news-section {
+            padding: 80px 0;
+        }
+        
+        .hero,
+        body.dark-mode .navbar {
+            background-color: #fff;
+        }
+        
+        .navbar,
+        footer {
+            background-image: url('ll.jpg');
+        }
+        
+        body {
+            font-family: Cairo, Arial, sans-serif;
+            background-color: #f8f9fa;
+            color: #000;
+            transition: background-color 0.5s, color 0.5s;
+            position: relative;
+        }
+        
+        .navbar-brand img {
+            width: 60px;
+        }
+        
+        .navbar-dark .navbar-toggler {
+            border: none;
+            color: #000;
+        }
+        
+        .navbar-dark .navbar-toggler-icon {
+            color: #000;
+            width: 24px;
+            height: 17px;
+        }
+        
+        .article img,
+        .explore-more .facebook-post {
+            max-width: 100%;
+            height: auto;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .navbar-dark .navbar-nav .nav-link {
+            color: #000;
+            padding: 10px 15px;
+            transition: background-color 0.3s;
+            text-align: right;
+        }
+        
+        .navbar-dark .navbar-nav .nav-link:hover,
+        body.dark-mode .navbar-dark .navbar-nav .nav-link:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        
+        @media (max-width: 768px) {
+            .navbar-brand img {
+                width: 40px;
+            }
+        }
+        
+        .hero {
+            background-size: cover;
+            background-position: center;
+            color: #000;
+            text-align: center;
+        }
+        
+        .fullscreen-menu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 1000;
+            display: none;
+            overflow-y: auto;
+        }
+        
+        .fullscreen-menu.open {
+            display: block;
+        }
+        
+        .fullscreen-menu-content {
+            position: absolute;
+            top: 6px;
+            right: 10px;
+            transform: translate(0, 0);
+            text-align: right;
+        }
+        
+        .fullscreen-menu-content ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        .fullscreen-menu-content ul li {
+            margin-bottom: 10px;
+        }
+        
+        .fullscreen-menu-content ul li a {
+            color: #fff;
+            font-size: 24px;
+            text-decoration: none;
+            transition: color 0.3s;
+            display: block;
+            padding: 10px;
+        }
+        
+        .fullscreen-menu-content ul li a:hover {
+            color: #ccc;
+        }
+        
+        .close-btn {
+            position: absolute;
+            top: 2px;
+            left: 10px;
+            color: #fff;
+            font-size: 50px;
+            cursor: pointer;
+        }
+        
+        .article {
+            margin-bottom: 40px;
+            text-align: right;
+        }
+        
+        .article img {
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+        
+        .article .meta,
+        .article h2 {
+            text-align: right;
+            margin-bottom: 10px;
+        }
+        
+        .article h2 {
+            font-size: 2.5rem;
+        }
+        
+        .article p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        .article .meta {
+            font-size: 1rem;
+            color: #6c757d;
+        }
+        
+        .article .btn-primary,
+        .article .meta .author {
+            float: right;
+        }
+        
+        .explore-more {
+            margin-top: 50px;
+            text-align: center;
+        }
+        
+        .explore-more .facebook-post {
+            border: none;
+        }
+        
+        .explore-more .read-more-link {
+            display: block;
+            margin-top: 20px;
+        }
+        
+        body.dark-mode {
+            background-color: #212529;
+            color: #fff;
+        }
+        
+        body.dark-mode .navbar-dark .navbar-nav .nav-link {
+            color: #fff;
+        }
+        
+        body.dark-mode .explore-more {
+            background-color: #343a40;
+            border-color: #6c757d;
+            color: #fff;
+            padding: 20px;
+        }
+        
+        footer {
+            color: #2100b6;
+            padding: 30px 0;
+            text-align: center;
+        }
+        
+        footer p {
+            margin-bottom: 0;
+        }
+        
+        .map-container {
+            width: 100%;
+            height: 300px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        .center-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 10vh;
+        }
+        
+        .center-container c {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-top: 40px;
+        }
+        
+        .center-container k {
+            text-align: center;
+            font-size: 1rem;
+            line-height: 1;
+            margin-bottom: 20px;
+        }
+        
+        .match {
+            margin-bottom: 40px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .k {
+            font-size: 1.5rem;
+            color: #333;
+            text-align: center;
+            margin-bottom: 10px;
+            display: block;
+            font-weight: bold;
+            /* Add any other styles you want */
+        }
+        /* Styles for image zoom */
+        
+        .image-zoomed {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 2000;
+            /* Ensure it's above other content */
+            background-color: rgba(0, 0, 0, 0.8);
+            /* Semi-transparent background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .image-zoomed img {
+            max-width: 90%;
+            max-height: 90%;
+            object-fit: contain;
+            /* Keep aspect ratio */
+            border-radius: 5px;
+            /* Optional: Rounded corners */
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            /* Optional: Shadow effect */
+            cursor: pointer;
+        }
+        /* Adjustments for h3 elements */
+        
+        h3 {
+            font-size: 2.5rem;
+            /* Base font size */
+            text-align: right;
+            /* Right-align text */
+            margin-bottom: 10px;
+            /* Bottom margin */
+            /* Add any other specific styles you want */
+        }
+        
+        .button-container {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header with Navbar -->
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark">
+            <div class="container">
+                <div class="navbar-brand mr-auto">
+                    <img src="ray.png" alt="MCA Logo">
+                </div>
+                <button class="navbar-toggler" type="button" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Fullscreen Menu -->
+    <div class="fullscreen-menu" id="fullscreenMenu">
+        <span class="close-btn">&times;</span><br><br>
+        <div class="fullscreen-menu-content">
+            <ul>
+                <li><a href="inde.html">الصفحة الرئيسية</a></li>
+                <li><a href="news1.html">مركز الريحان للدروس الدعم</a></li>
+                <li><a href="first1.html">مدرسة الريحان للتكوين المهني</a></li>
+                <li><a href="reserve1.html">الطاقم الاداري</a></li>
+                <li><a href="histoir1.html">معلومات عنا</a></li>
+                <li><a href="contact1.html">تواصل معنا</a></li>
+            </ul>
+        </div>
+    </div>
+    <section class="news-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h3>طور المتوسط</h3><br>
+                    <article class="article">
+                        <img src="1.jpg" alt="Article Image 1">
+                    </article>
+                </div>
+                <!-- Example Article 2 -->
+                <div class="col-lg-6">
+                    <article class="article">
+                        <img src="2.jpg" alt="Article Image 2">
+                    </article>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-6">
+                    <article class="article">
+                        <img src="3.jpg" alt="Article Image 1">
+                    </article>
+                </div>
+                <div class="col-lg-6">
+                    <article class="article">
+                        <img src="4.jpg" alt="Article Image 1">
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="news-section">
+        <div class="container">
+            <div class="row">
+                <h3>طور الثانوي</h3><br><br>
+                <div class="col-lg-6">
+                    <article class="article">
+                        <img src="10.jpg" alt="Article Image 1">
+                    </article>
+                </div>
+                <!-- Example Article 2 -->
+                <div class="col-lg-6">
+                    <article class="article">
+                        <img src="11.jpg" alt="Article Image 2">
+                    </article>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-6">
+                    <article class="article">
+                        <img src="12.jpg" alt="Article Image 1">
+                    </article>
+                </div>
+                <div class="col-lg-6">
+                    <article class="article">
+                        <img src="13.jpg" alt="Article Image 1">
+                    </article>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-6">
+                    <article class="article">
+                        <img src="14.jpg" alt="Article Image 1">
+                    </article>
+                </div>
+                <div class="col-lg-6">
+                    <article class="article">
+                        <img src="15.jpg" alt="Article Image 1">
+                    </article>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-6">
+                    <article class="article">
+                        <img src="16.jpg" alt="Article Image 1">
+                    </article>
+                </div>
+                <div class="col-lg-6">
+                    <article class="article">
+                        <img src="17.jpg" alt="Article Image 1">
+                    </article>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-6">
+                    <article class="article">
+                        <img src="18.jpg" alt="Article Image 1">
+                    </article>
+                </div>
+                <div class="col-lg-6">
+                    <article class="article">
+                        <img src="19.jpg" alt="Article Image 1">
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="center-container">
+        <k>للاتصال، انقر على الرقم التالي: <a href="tel:0770432416">0770432416</a></k>
+    </div>
+
+    <!-- Centered Container for Registration Link -->
+    <div class="center-container">
+        <k>للتسجيل، انقر <a href="https://airtable.com/appjieFlF6WPf7T6i/shr46fkYMjXjKR3kC?fbclid=IwY2xjawEc6thleHRuA2FlbQIxMAABHemiGW0cdJgeav5LVjanlvk8VRVWIfGd4aTJK2ojuA6nkKFEm-qW2VyOfg_aem_tc43V0qm3RWy8J9GkWDHLA">هنا</a></k>
+    </div>
+    <div class="button-container">
+        <a href="news1.html">
+            <button>رجوع الى الخلف</button>
+        </a>
+    </div><br>
+    <!-- Footer Section -->
+    <footer class="text-center py-4">
+        <p>. جميع الحقوق محفوظة&copy; </p>
+    </footer>
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Custom Script -->
+    <script>
+        // Close the fullscreen menu when clicking outside of it or on close button
+        $(document).ready(function() {
+            // Toggle fullscreen menu
+            $('.navbar-toggler').click(function() {
+                $('#fullscreenMenu').toggleClass('open');
+            });
+
+            // Close the fullscreen menu when clicking outside of it
+            $(document).mouseup(function(e) {
+                var container = $("#fullscreenMenu");
+                if (!container.is(e.target) && container.has(e.target).length === 0) {
+                    container.removeClass('open');
+                }
+            });
+
+            // Close the fullscreen menu when close button is clicked
+            $('.close-btn').click(function() {
+                $('#fullscreenMenu').removeClass('open');
+            });
+        });
+
+        // Toggle between light and dark mode
+        const body = document.body;
+        const navbarBrand = document.querySelector('.navbar-brand');
+
+        navbarBrand.addEventListener('click', function() {
+            body.classList.toggle('dark-mode');
+        });
+
+
+        // JavaScript to handle image zooming
+        document.addEventListener('DOMContentLoaded', function() {
+            const articles = document.querySelectorAll('.article');
+
+            articles.forEach(article => {
+                const img = article.querySelector('img');
+
+                // Add click event listener to each image
+                img.addEventListener('click', function() {
+                    // Toggle the image zoomed class on the clicked image's parent article
+                    article.classList.toggle('image-zoomed');
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
