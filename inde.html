@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>مركز الريحان للتكوين والتأهيل </title>
-  
+    <title>مركز الريحان للتكوين والتأهيل</title>
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <!-- Font Awesome -->
@@ -14,12 +14,11 @@
     <link rel="stylesheet" href="styles.css">
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="ray.png">
+    <!-- Google Fonts - Cairo -->
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
-  
+
     <style>
-        /* Your CSS styles here */
-        /* General styles */
-        /* General styles */
+        /* Base Styles */
         
         body {
             font-family: 'Cairo', Arial, sans-serif;
@@ -32,11 +31,12 @@
         
         .arabic-date {
             font-family: 'Times New Roman', Times, serif;
-            /* Specify different font for date */
+            /* Specify different font for Arabic date */
         }
+        /* Navbar Styles */
         
         .navbar {
-            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQq42lUO-VDBNiIyrSvnLqbEy5KAXCZoUmAiOKCXRF834_Ixl-by5CJqtkXmRN030EYmYA&usqp=CAU');
+            background-image: url('https://media.adeo.com/media/1548719/media.jpg?width=650&height=650&format=jpg&quality=80&fit=bounds');
         }
         
         .navbar-brand img {
@@ -66,7 +66,7 @@
         .navbar-dark .navbar-nav .nav-link:hover {
             background-color: rgba(255, 255, 255, 0.1);
         }
-        /* Fullscreen menu styles */
+        /* Fullscreen Menu Styles */
         
         .fullscreen-menu {
             position: fixed;
@@ -126,33 +126,31 @@
         .close-btn {
             position: absolute;
             top: 2px;
-            /* تعديل حسب الحاجة */
+            /* Adjust as needed */
             left: 10px;
-            /* تعديل لتحديد الزاوية اليسرى */
+            /* Adjust to position close button */
             color: #fff;
-            /* تعديل لون النص */
+            /* Button text color */
             font-size: 50px;
-            /* تعديل حجم الخط */
+            /* Button font size */
             cursor: pointer;
         }
+        /* Responsive Design and Dark Mode */
         
-        body[dir="rtl"] {
-            font-family: 'Cairo', Arial, sans-serif;
+        @media (max-width: 768px) {
+            .navbar-brand img {
+                width: 40px;
+            }
+            /* Additional styles for mobile devices */
         }
-        
-        .live-scores-section {
-            padding: 50px 0;
-            background-color: #f8f9fa;
-        }
-        /* Dark Mode Styles */
         
         body.dark-mode {
-            background-color: #22262a;
+            background-color: #343a40;
             color: #fff;
         }
         
         body.dark-mode .navbar {
-            background-color: #0b0d0e;
+            background-color: #212529;
         }
         
         body.dark-mode .navbar-dark .navbar-nav .nav-link {
@@ -162,60 +160,74 @@
         body.dark-mode .navbar-dark .navbar-nav .nav-link:hover {
             background-color: rgba(255, 255, 255, 0.1);
         }
-        /* Media Query for Mobile Devices */
+        /* Hero Section */
         
-        @media (max-width: 768px) {
-            .navbar-brand img {
-                width: 40px;
-            }
+        .hero {
+            height: 70vh;
+            /* Height of the hero section */
+            position: relative;
+            overflow: hidden;
+            background-image: url('https://media.adeo.com/media/1548719/media.jpg?width=650&height=650&format=jpg&quality=80&fit=bounds');
+            background-size: cover;
+            background-position: center;
+            color: #fae525;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
         
-        .navbar-dark .navbar-nav .nav-link:hover {
-            background-color: rgba(255, 255, 255, 0.1);
+        .hero-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://media.adeo.com/media/1548719/media.jpg?width=650&height=650&format=jpg&quality=80&fit=bounds');
+            background-size: cover;
+            z-index: -1;
         }
         
-      
-        
-        @media (max-width: 768px) {
-            
-        
-        .btn-primary {
-            background-color: #dc3545;
-            border-color: #dc3545;
-        }
-        
-        .btn-primary:hover {
-            background-color: #c82333;
-            border-color: #bd2130;
-        }
-        
-        .feature {
-            background-color: #fff;
-            padding: 20px;
+        .hero h1 {
+            font-size: 3.5rem;
             margin-bottom: 20px;
-            border: 1px solid #dee2e6;
-            border-radius: 5px;
+        }
+        
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+        }
+        /* Blogs Section */
+        
+        .blogs-section {
+            padding: 60px 0;
+            background-color: rgba(255, 255, 0, 0.5);
+            /* Example background color with transparency */
             text-align: center;
         }
         
-        .feature img {
-            max-width: 50%;
+        .blog {
+            margin-bottom: 30px;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            background-color: hsla(0, 0%, 0%, 0);
+            /* Example background color with transparency */
+        }
+        
+        .blog img {
+            max-width: 100%;
             height: auto;
             border-radius: 5px;
-        }
-        /* Section for Social Icons */
-        
-        .social-icons {
-            text-align: center;
-            margin-top: 20px;
+            transition: transform 0.3s;
         }
         
-        .social-icons a {
-            font-size: 24px;
-            margin: 0 10px;
-            color: #343a40;
-            transition: color 0.3s;
+        .blog h3 {
+            margin-top: 10px;
+            font-size: 1.5rem;
         }
+        /* Authors Section */
         
         .authors-section {
             background-image: url('https://w0.peakpx.com/wallpaper/296/71/HD-wallpaper-skyblue-background-colors-edge-galaxy-gradient-note-plain-simple-sky.jpg');
@@ -241,14 +253,13 @@
         .author h3 {
             font-size: 1.5rem;
             margin-bottom: 10px;
-            color: black;
         }
         
         .author p {
             font-size: 1rem;
             margin-bottom: 20px;
-            color: black;
         }
+        /* Media Query for Mobile Devices */
         
         @media (max-width: 768px) {
             .authors-section {
@@ -281,31 +292,6 @@
                 font-size: 1rem;
                 margin-bottom: 20px;
             }
-            .author1 {
-                text-align: center;
-                margin-bottom: 30px;
-            }
-            .author img {
-                border-radius: 50%;
-                object-fit: cover;
-                margin-bottom: 20px;
-                border: 4px solid #fff;
-                box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-                width: 140px;
-                /* Fixed width for the images */
-                height: 140px;
-                /* Fixed height for the images */
-                margin-left: 15px;
-                /* Space between image and text */
-            }
-            .author h31 {
-                font-size: 1.5rem;
-                margin-bottom: 10px;
-            }
-            .author p1 {
-                font-size: 1rem;
-                margin-bottom: 20px;
-            }
         }
         /* Dark Mode Styles */
         
@@ -325,100 +311,29 @@
         body.dark-mode .navbar-dark .navbar-nav .nav-link:hover {
             background-color: rgba(255, 255, 255, 0.1);
         }
-        
-        body.dark-mode .hero {
-            background-color: #343a40;
-            color: #fff;
-        }
-        
-        body.dark-mode .btn-primary {
-            background-color: #dc3545;
-            border-color: #dc3545;
-        }
-        
-        body.dark-mode .btn-primary:hover {
-            background-color: #c82333;
-            border-color: #bd2130;
-        }
-        
-        body.dark-mode .feature {
-            background-color: #424242;
-            border-color: #757575;
-            color: #fff;
-        }
-        
-        body.dark-mode .social-icons a {
-            color: #fff;
-        }
-        
-        body.dark-mode .authors-section {
-            background-color: #212529;
-            color: #fff;
-        }
-        /* Blogs Section */
-        
-        .blogs-section {
-            padding: 60px 0;
-            background-color: ;
-            /* Gris avec 50% de transparence */
-            text-align: center;
-        }
-        
-        .blog {
-            margin-bottom: 30px;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-            background-color: rgba(255, 255, 0, 0.5);
-            background-color: hsla(0, 0%, 0%, 0);
-        }
-        
-        .blog img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 5px;
-            transition: transform 0.3s;
-        }
-        
-        .blog h3 {
-            margin-top: 10px;
-            font-size: 1.5rem;
-            color: black;
-        }
-        
-        .blog:hover img {
-            transform: scale(1.1);
-        }
         /* Footer Section */
         
         footer {
-            color: #fff;
+            color: #fae525;
             padding: 30px 0;
             text-align: center;
+            background-image: url('https://media.adeo.com/media/1548719/media.jpg?width=650&height=650&format=jpg&quality=80&fit=bounds');
         }
         
         footer p {
             margin-bottom: 0;
         }
+        /* Button Styles */
         
-        .center-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100%;
-            /* Center text horizontally within .center-container */
+        .btn-primary {
+            background-color: #dc3545;
+            border-color: #dc3545;
         }
         
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6 {
-            font-family: 'Cairo', Arial, sans-serif;
+        .btn-primary:hover {
+            background-color: #c82333;
+            border-color: #bd2130;
         }
-        /* Add this to your CSS file or <style> block */
         
         .btn-white {
             background-color: #343a40;
@@ -438,83 +353,31 @@
             font-size: 16px;
             /* Font size */
             cursor: pointer;
-            /* Pointer cursor on hover */
+            /* Add mouse pointer on hover */
             border-radius: 5px;
-            /* Rounded corners */
-            transition: background-color 0.3s, color 0.3s;
-            /* Smooth transition */
+            /* Border radius */
+            transition: 0.3s;
+            /* Transition effect on hover */
         }
         
         .btn-white:hover {
-            background-color: white;
-            /* Black background on hover */
+            background-color: #fff;
+            /* White background on hover */
             color: black;
-            /* White text color on hover */
-        }
-        /* Base styles for news container */
-        
-        .news {
-            display: flex;
-            /* Arrange items in a column */
-            flex-direction: column;
-            gap: 20px;
-            /* Space between news items */
-            background-image: url('');
+            /* Black text color on hover */
         }
         
-        .custom-icon {
-            width: 24px;
-            /* Adjust as per your icon size */
-            height: 24px;
-            margin-left: 10px;
-            /* Adjust spacing */
+        .social-icons {
+            text-align: center;
+            margin-top: 20px;
         }
         
-        .ellipsis {
-            /* Style pour les points de suspension */
+        .social-icons a {
             font-size: 24px;
-            /* Taille de police (ajustez selon vos besoins) */
-            color: #fff;
-            /* Couleur du texte */
-            margin-left: 5px;
-            /* Marge à gauche pour l'espace entre le texte et les points de suspension */
+            margin: 0 10px;
+            color: #343a40;
+            transition: color 0.3s;
         }
-        
- .hero {
-    height: 70vh; /* Height of the hero section, equal to 70% of the viewport height */
-    position: relative; /* Relative positioning for absolute child elements */
-    overflow: hidden; /* Hide overflow to prevent background image overflow */
-    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9uQQkqU1sIb-mX4Y-4YrFCBNXRrbDrRadYw&s'); /* Background image URL */
-    background-size: cover; /* Resize background image to cover entire section */
-    background-position: center; /* Center the background image */
-    color: #ffffff; /* Text color for the hero section */
-    text-align: center; /* Center align text content */
-    display: flex; /* Use flexbox for vertical and horizontal centering */
-    justify-content: center; /* Center content horizontally */
-    align-items: center; /* Center content vertically */
-}
-
-.hero-background {
-    position: absolute; /* Absolute positioning for the background layer */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQq42lUO-VDBNiIyrSvnLqbEy5KAXCZoUmAiOKCXRF834_Ixl-by5CJqtkXmRN030EYmYA&usqp=CAU'); /* Background image URL */
-    background-size: cover; /* Resize background image to cover */
-    z-index: -1; /* Place the background behind other content */
-}
-
-.hero h1 {
-    font-size: 3.5rem;
-    margin-bottom: 20px;
-}
-
-.hero p {
-    font-size: 1.5rem;
-    margin-bottom: 30px;
-}
-
     </style>
 </head>
 
@@ -556,40 +419,54 @@
                 </li>
             </ul>
         </div>
-    </div>
- <section class="hero">
-    <div class="hero-background"></div>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12 text-center">
-                <h1 class="display-4">مركز الريحان للتكوين والتأهيل</h1>
-                <p class="lead">مرحباً بكم في موقعنا الإلكتروني</p>
-                <a href="#" class="btn btn-primary btn-lg">المزيد</a>
-            </div>
-        </div>
-    </div>
-</section>
+    </div><br>
+    <section class="hero">
+        <div class="hero-background"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h1 class="display-4">مركز الريحان للتكوين والتأهيل</h1>
+                    <p class="lead">مرحباً بكم في موقعنا الإلكتروني</p>
 
-
-
-
-        <br>
-        <section class="image-before-icons">
-            <div class="container">
-                <div class="row">
-                    <div class="col text-center">
-                        <img src="mca2.jpg" class="img-fluid" alt="Image Description">
-                    </div>
                 </div>
             </div>
-        </section><br>
-
-
-        <section class="live-scores-section">
-            <div class="container">
-
+        </div>
+    </section>
+    <br>
+    <section class="image-before-icons">
+        <div class="container">
+            <div class="row">
+                <div class="col text-center">
+                    <img src="zzz.jpg" class="img-fluid" alt="Image Description">
+                </div>
             </div>
-   
+        </div>
+    </section><br>
+    <section class="image-before-icons">
+        <div class="container">
+            <div class="row">
+                <div class="col text-center">
+                    <img src="mmm.jpg" class="img-fluid" alt="Image Description">
+                </div>
+            </div>
+        </div>
+    </section><br>
+    <section class="image-before-icons">
+        <div class="container">
+            <div class="row">
+                <div class="col text-center">
+                    <img src="ddd.jpg" class="img-fluid" alt="Image Description">
+                </div>
+            </div>
+        </div>
+    </section><br>
+
+
+    <section class="live-scores-section">
+        <div class="container">
+
+        </div>
+
         <section class="social-icons">
             <div class="container">
                 <a href="https://www.facebook.com/rayhane.center/"><i class="fab fa-facebook-f"></i></a>
@@ -599,64 +476,24 @@
             </div>
         </section>
 
-        <section class="authors-section">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6 col-md-6">
-                        <div class="author">
-                            <a href="https://www.facebook.com/abdouoooooooooooooooooooooooooooooooooooooooo/?locale=fr_FR" target="_blank">
-                                <img src="dev.png" class="img-fluid1" alt="Développeur">
-                            </a>
-                            <h3>Iliesso</h3>
-                            <p>مطور</p>
-                        </div>
-                        <footer class="text-center py-4">
-                            <p>&copy; 2024 Mouloudia Actualités. جميع الحقوق محفوظة.</p>
-                        </footer>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Bootstrap JS, Popper.js, and jQuery -->
+
+        <footer class="text-center py-4">
+            <p>&copy; جميع الحقوق محفوظة.</p>
+        </footer>
+        <!-- Bootstrap JS, Popper.js, and j, jQuery, and custom JS -->
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-        <!-- Custom JS -->
+
         <script>
-            // Script to toggle dark mode
-            const logo = document.querySelector('.navbar-brand img');
-            const body = document.body;
-            const viewMenu = document.querySelector('.navbar-collapse');
-
-            logo.addEventListener('click', function() {
-                body.classList.toggle('dark-mode');
-
+            document.querySelector('.navbar-toggler').addEventListener('click', function() {
+                document.getElementById('fullscreenMenu').classList.toggle('open');
             });
-            // JavaScript to toggle fullscreen menu
-            $(document).ready(function() {
-                $('.navbar-toggler').click(function() {
-                    $('#fullscreenMenu').toggleClass('open');
-                });
 
-                // Close the menu when clicking outside of it
-                $(document).mouseup(function(e) {
-                    var container = $("#fullscreenMenu");
-                    if (!container.is(e.target) && container.has(e.target).length === 0) {
-                        container.removeClass('open');
-                    }
-                });
-
-                // Close the menu when close button is clicked
-                $('.close-btn').click(function() {
-                    $('#fullscreenMenu').removeClass('open');
-                });
+            document.querySelector('.close-btn').addEventListener('click', function() {
+                document.getElementById('fullscreenMenu').classList.remove('open');
             });
-            // Remove previously mentioned dark mode toggle button event
-            const toggleButton = document.querySelector('.btn-primary');
-            toggleButton.parentNode.removeChild(toggleButton);
         </script>
 </body>
-
-</html>
 
 </html>
