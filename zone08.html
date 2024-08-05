@@ -481,15 +481,14 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <!-- Custom Script -->
-    <script>
-        // Close the fullscreen menu when clicking outside of it or on close button
+   <script>
+        // Toggle fullscreen menu
         $(document).ready(function() {
-            // Toggle fullscreen menu
             $('.navbar-toggler').click(function() {
                 $('#fullscreenMenu').toggleClass('open');
             });
 
-            // Close the fullscreen menu when clicking outside of it
+            // Close the fullscreen menu when clicking outside of it or on close button
             $(document).mouseup(function(e) {
                 var container = $("#fullscreenMenu");
                 if (!container.is(e.target) && container.has(e.target).length === 0) {
@@ -497,60 +496,29 @@
                 }
             });
 
-            // Close the fullscreen menu when close button is clicked
             $('.close-btn').click(function() {
                 $('#fullscreenMenu').removeClass('open');
             });
-        });
 
-        // Toggle between light and dark mode
-        const body = document.body;
-        const navbarBrand = document.querySelector('.navbar-brand');
+            // Toggle dark mode
+            $('.navbar-brand').click(function() {
+                $('body').toggleClass('dark-mode');
+            });
 
-        navbarBrand.addEventListener('click', function() {
-            body.classList.toggle('dark-mode');
-        });
-
-document.addEventListener('DOMContentLoaded', function() {
-    const articles = document.querySelectorAll('.article');
-
-    articles.forEach(article => {
-        const img = article.querySelector('img');
-        const zoomContainer = article.querySelector('.zoom-container');
-        const closeBtn = article.querySelector('.close-btn');
-
-        // Ajouter un écouteur d'événements au clic sur l'image
-        img.addEventListener('click', function() {
-            // Ajouter la classe image-zoomed à l'article parent
-            article.classList.add('image-zoomed');
-        });
-
-        // Ajouter un écouteur d'événements au clic sur le bouton de fermeture
-        closeBtn.addEventListener('click', function() {
-            // Retirer la classe image-zoomed de l'article parent
-            article.classList.remove('image-zoomed');
-        });
-
-        // Fermer l'image zoomée en cliquant à l'extérieur de l'image zoomée
-        zoomContainer.addEventListener('click', function(e) {
-            if (e.target === this) {
-                article.classList.remove('image-zoomed');
-            }
-        });
-    });
-});
-
-        // JavaScript to handle image zooming
-        document.addEventListener('DOMContentLoaded', function() {
+            // Image zoom functionality
             const articles = document.querySelectorAll('.article');
 
             articles.forEach(article => {
                 const img = article.querySelector('img');
 
-                // Add click event listener to each image
                 img.addEventListener('click', function() {
-                    // Toggle the image zoomed class on the clicked image's parent article
                     article.classList.toggle('image-zoomed');
+                });
+
+                const closeBtn = article.querySelector('.close-btn');
+
+                closeBtn.addEventListener('click', function() {
+                    article.classList.remove('image-zoomed');
                 });
             });
         });
