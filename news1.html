@@ -255,6 +255,36 @@
     line-height: 1;
     margin-bottom: 20px;
 }
+.photo-container {
+    width: 100%; /* Full width of its parent container */
+    max-width: 600px; /* Maximum width to maintain responsiveness */
+    margin: 0 auto; /* Center the div horizontally */
+    border: 1px solid #ccc; /* Optional: Add a border around the div */
+    border-radius: 8px; /* Optional: Rounded corners */
+    overflow: hidden; /* Ensure the image doesn't overflow */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+}
+
+.photo-container img {
+    display: block; /* Remove default inline behavior */
+    width: 100%; /* Fill the entire width of its parent div */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Media query for tablets and larger screens */
+@media (min-width: 768px) {
+    .photo-container {
+        max-width: 80%; /* Adjust maximum width for tablets and larger screens */
+    }
+}
+
+/* Media query for phones */
+@media (max-width: 576px) {
+    .photo-container {
+        max-width: 100%; /* Adjust maximum width for phones */
+        border-radius: 0; /* Remove rounded corners on smaller screens if needed */
+    }
+}
 
     </style>
 </head>
@@ -300,6 +330,10 @@
             </ul>
         </div>
     </div>
+    <div class="photo-container">
+    <img src="ro.jpg" alt="Description of the photo">
+</div>
+
     <section class="news-section">
         <div class="container">
   <p>فرع المنطقة 08 : بجانب ثانوية أبي راس الناصري </p>
