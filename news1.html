@@ -12,6 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Cairo&display=swap" rel="stylesheet">
     <style>
         /* Global styles */
+        
         body {
             font-family: 'Cairo', Arial, sans-serif;
             background-color: #f8f9fa;
@@ -19,13 +20,13 @@
             transition: background-color 0.5s, color 0.5s;
         }
         
-        /* Navbar */
         .navbar {
             background-image: url('green.jpg');
         }
         
         .navbar-brand img {
-            width: 60px; /* Adjust logo size */
+            width: 60px;
+            /* Adjust logo size for larger screens */
         }
         
         .navbar-dark .navbar-toggler {
@@ -44,6 +45,11 @@
             padding: 10px 15px;
             transition: background-color 0.3s;
             text-align: right;
+            /* Right-align text */
+        }
+        
+        .navbar-dark .navbar-nav .nav-link:hover {
+            background-color: rgba(255, 255, 255, 0.1);
         }
         
         .navbar-dark .navbar-nav .nav-link:hover {
@@ -52,11 +58,23 @@
         
         @media (max-width: 768px) {
             .navbar-brand img {
-                width: 40px; /* Adjust logo size for smaller screens */
+                width: 40px;
             }
         }
         
-        /* Fullscreen Menu */
+        .navbar-dark .navbar-nav .nav-link:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        
+        .hero {
+            background-color: white;
+            background-size: cover;
+            background-position: center;
+            color: #000;
+            text-align: center;
+            padding: 80px 0;
+        }
+        
         .fullscreen-menu {
             position: fixed;
             top: 0;
@@ -112,53 +130,20 @@
             cursor: pointer;
         }
         
-        /* Sections */
-        .center-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 50%;
+        .close-btn {
+            position: absolute;
+            top: 2px;
+            /* تعديل حسب الحاجة */
+            left: 10px;
+            /* تعديل لتحديد الزاوية اليسرى */
+            color: #fff;
+            /* تعديل لون النص */
+            font-size: 50px;
+            /* تعديل حجم الخط */
+            cursor: pointer;
         }
+        /* Section for Social Icons */
         
-        .center-container k {
-            font-size: 1.5rem;
-            color: #333;
-            text-align: center;
-            margin-bottom: 10px;
-            display: block;
-            font-weight: bold;
-        }
-        
-        .news-section p {
-            color: #000;
-            font-size: 2.0rem;
-            line-height: 1.6;
-            text-align: right;
-            margin-bottom: 10px;
-            background-color: #f8f9fa; /* Example alternating background color */
-            padding: 20px; /* Added padding for better readability */
-            border-radius: 5px; /* Rounded corners for sections */
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
-        }
-        
-        /* Photo Container */
-        .photo-container {
-            width: 100%;
-            max-width: 600px;
-            margin: 0 auto;
-            border: 1px solid #ccc;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        
-        .photo-container img {
-            display: block;
-            width: 100%;
-            height: auto;
-        }
-        
-        /* Social Icons */
         .social-icons {
             text-align: center;
             margin-top: 20px;
@@ -166,27 +151,44 @@
         
         .social-icons a {
             font-size: 24px;
+            /* Icon size */
             margin: 0 10px;
+            /* Space between icons */
             color: #343a40;
+            /* Default icon color */
             transition: color 0.3s;
         }
         
         .social-icons a:hover {
             color: #dc3545;
+            /* Icon color on hover */
         }
         
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 20px 0;
-            background-color: #f8f9fa;
-            color: #333;
+      
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+            color: #fff;
+            font-size: 1.1rem;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
         }
         
+        .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #0056b3;
+        }
+        
+        .btn-primary:focus {
+            box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5);
+        }
         /* Dark Mode Styles */
+        
         body.dark-mode {
             background-color: #212529;
             color: #fff;
+            /* Green text */
         }
         
         body.dark-mode .navbar {
@@ -195,15 +197,117 @@
         
         body.dark-mode .navbar-dark .navbar-nav .nav-link {
             color: #fff;
+            /* Red text */
         }
         
         body.dark-mode .navbar-dark .navbar-nav .nav-link:hover {
             background-color: rgba(255, 255, 255, 0.1);
         }
+        
+        body.dark-mode .explore-more {
+            background-color: #343a40;
+            /* Dark grey background */
+            border-color: #6c757d;
+            /* Medium grey border */
+            color: #fff;
+            /* Green text */
+            padding: 20px;
+        }
+        
+        h2,
+        p,
+        a {
+            font-family: 'Cairo', Arial, sans-serif;
+        }
+       
+        .center-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 50%;
+            /* Center text horizontally within .center-container */
+        }
+           .match {
+            margin-bottom: 40px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+         k {
+        font-size: 1.5rem;
+        color: #333;
+        text-align: center;
+        margin-bottom: 10px;
+        display: block;
+        font-weight: bold;
+        /* Add any other styles you want */
+    }
+        .center-container c {
+    font-size: 2.5rem;
+  text-align: centre; /* Align text to the right */
+
+    margin-top: 40px;
+}
+
+        .center-container k {
+    text-align: centre; /* Align text to the right */
+
+    font-size: 1rem;
+    line-height: 1;
+    margin-bottom: 20px;
+}
+    .news-section p {
+    color: #000; /* Black color */
+    font-size: 2.0rem;
+    line-height: 1.6; /* Adjust line height as needed */
+    text-align: right; /* Right-align text */
+    margin-bottom: 10px; /* Example margin-bottom */
+}
+
+/* Additional styles for specific sections if needed */
+.news-section:nth-child(odd) {
+    background-color: #f8f9fa; /* Example alternating background color */
+}
+
+
+.photo-container {
+    width: 100%; /* Full width of its parent container */
+    max-width: 600px; /* Maximum width to maintain responsiveness */
+    margin: 0 auto; /* Center the div horizontally */
+    border: 1px solid #ccc; /* Optional: Add a border around the div */
+    border-radius: 8px; /* Optional: Rounded corners */
+    overflow: hidden; /* Ensure the image doesn't overflow */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+}
+
+.photo-container img {
+    display: block; /* Remove default inline behavior */
+    width: 100%; /* Fill the entire width of its parent div */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Media query for tablets and larger screens */
+@media (min-width: 768px) {
+    .photo-container {
+        max-width: 80%; /* Adjust maximum width for tablets and larger screens */
+    }
+}
+
+/* Media query for phones */
+@media (max-width: 576px) {
+    .photo-container {
+        max-width: 100%; /* Adjust maximum width for phones */
+        border-radius: 0; /* Remove rounded corners on smaller screens if needed */
+    }
+}
+
+
     </style>
 </head>
 
 <body>
+    <!-- Header with Navbar -->
     <!-- Header with Navbar -->
     <header>
         <nav class="navbar navbar-expand-md navbar-dark">
@@ -218,87 +322,171 @@
         </nav>
     </header>
 
-    <!-- Fullscreen Menu -->
+   <!-- Fullscreen Menu -->
     <div class="fullscreen-menu" id="fullscreenMenu">
-        <span class="close-btn">&times;</span>
+        <span class="close-btn">&times;</span><br><br>
         <div class="fullscreen-menu-content">
             <ul>
-                <li><a href="index.html">الصفحة الرئيسية</a></li>
-                <li><a href="news1.html">مركز الريحان للدروس الدعم</a></li>
-                <li><a href="first1.html">مدرسة الريحان للتكوين المهني</a></li>
-                <li><a href="reserve1.html">الطاقم الاداري</a></li>
-                <li><a href="histoir1.html">معلومات عنا</a></li>
-                <li><a href="contact1.html">تواصل معنا</a></li>
+                <br><br>
+                <li><a href="inde.html">الصفحة الرئيسية</a></li>
+                <li>
+                    <a href="news1.html">مركز الريحان للدروس الدعم </a>
+                </li>
+                <li>
+                    <a href="first1.html">مدرسة الريحان للتكوين المهني</a>
+                </li>
+                <li>
+                    <a href="reserve1.html">الطاقم الاداري</a>
+                </li>
+                <li>
+                    <a href="histoir1.html">معلومات عنا</a>
+                </li>
+                <li>
+                    <a href="contact1.html">تواصل معنا</a>
+                </li>
             </ul>
         </div>
     </div>
+ <br> <div class="photo-container">
+    <img src="ro.jpg" alt="Description of the photo">
+</div><br><br>
 
-    <!-- Photo Container -->
-    <div class="photo-container">
-        <img src="ro.jpg" alt="Description of the photo">
-    </div>
-
-    <!-- Sections -->
-    <section class="news-section">
+  <section class="news-section">
+    <a href="zone08.html" class="section-link">
         <div class="container">
-            <p>فرع المنطقة 08 : بجانب ثانوية أبي راس الناصري</p>
-            <div class="map-container">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3252.2505787757464!2d0.1477383757751989!3d35.39903897267971!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzXCsDIzJzU2LjUiTiAwwrAwOScwMS4xIkU!5e0!3m2!1sfr!2sdz!4v1722816972861!5m2!1sfr!2sdz" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
+            <p>فرع المنطقة 08 : بجانب ثانوية أبي راس الناصري </p><br>
+            <section class="live-scores-section">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="match">
+                                <div class="map-container">
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3252.2505787757464!2d0.1477383757751989!3d35.39903897267971!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzXCsDIzJzU2LjUiTiAwwrAwOScwMS4xIkU!5e0!3m2!1sfr!2sdz!4v1722816972861!5m2!1sfr!2sdz" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                </div>
+                            </div> 
+                        </div>          
+                    </div>
+                </div>
+            </section>
             <div class="center-container">
                 <k>للاتصال، انقر على الرقم التالي: <a href="tel:0795928687">0795928687 </a></k>
             </div>
         </div>
-    </section>
+    </a>
+</section>
 
-    <section class="news-section">
+<section class="news-section">
+    <a href="zone12.html" class="section-link">
         <div class="container">
-            <p>فرع المنطقة 12 : طريق واجتر العشرين سبتمبر</p>
-            <div class="map-container">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3029.499561827961!2d0.14828911532501617!3d35.67017023382619!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjHCsDQyJzI5LjYiTiAwwrAwNyckNTguMSJF!5e0!3m2!1sfr!2sdz!4v1722816972861!5m2!1sfr!2sdz" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
+            <p>فرع المنطقة 12 : طريق الجامعة سطمبولي </p><br>
+            <section class="live-scores-section">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="match">
+                                <div class="map-container">
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3251.9236425699914!2d0.13302517577555012!3d35.407143172677!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzXCsDI0JzI1LjciTiAwwrAwOCcwOC4yIkU!5e0!3m2!1sfr!2sdz!4v1722817186874!5m2!1sfr!2sdz" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                </div>
+                            </div> 
+                        </div>          
+                    </div>
+                </div>
+            </section>
             <div class="center-container">
-                <k>للاتصال، انقر على الرقم التالي: <a href="tel:0796543102">0796543102 </a></k>
+                <k>للاتصال، انقر على الرقم التالي: <a href="tel:0770827996">0770827996 </a></k>
+            </div>
+        </div>
+    </a>
+</section>
+
+<section class="news-section">
+    <a href="madb.html" class="section-link">
+        <div class="container">
+            <p>فرع مدبر : طريق وهران</p><br>
+            <section class="live-scores-section">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="match">
+                                <div class="map-container">
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3251.9236425699914!2d0.13302517577555012!3d35.407143172677!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzXCsDI0JzI1LjciTiAwwrAwOCcwOC4yIkU!5e0!3m2!1sfr!2sdz!4v1722817527275!5m2!1sfr!2sdz" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                </div>
+                            </div> 
+                        </div>          
+                    </div>
+                </div>
+            </section>
+              <div class="center-container">
+        <k>للاتصال، انقر على الرقم التالي: <a href="tel:0663818721">0663818721 </a></k>
+    </div>
+            </div>
+        </div>
+    </section>
+    <section class="image-before-icons">
+        <div class="container">
+            <div class="row">
+                <div class="col text-center">
+                    <img src="mca2.jpg" class="img-fluid" alt="Image Description">
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Social Icons -->
-    <div class="social-icons">
-        <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
-        <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
-    </div>
+    <section class="social-icons">
+        <div class="container">
+            <a href="https://www.facebook.com/mouloudianiyouten.21.mca/?locale=fr_FR" target="_blank"><i class="fab fa-facebook-square"></i></a>
+            <a href="https://www.instagram.com/mouloudia__actualites?igsh=MWhvZXVsbzkxOTRmaA==" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://youtube.com/@mouloudiaactualites?si=idNCKDhmknjI_uHD"><i class="fab fa-youtube"></i></a>
+        </div>
+    </section>
 
-    <!-- Footer -->
-    <footer>
-        <p>حقوق النشر © 2024 - مركز الريحان للدعم</p>
+
+    <!-- Footer Section -->
+    <footer class="text-center py-4">
+        <c>&copy; 2024 Mouloudia Actualités. جميع الحقوق محفوظة.<c/>
     </footer>
 
-    <!-- JavaScript for Bootstrap and custom scripts -->
+    <!-- Bootstrap JS and dependencies -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Dark Mode Toggle Script -->
     <script>
-        // Toggle fullscreen menu
-        const toggleMenu = () => {
-            const menu = document.getElementById('fullscreenMenu');
-            menu.classList.toggle('open');
-        };
+        $(document).ready(function() {
+            // Toggle fullscreen menu
+            $('.navbar-toggler').click(function() {
+                $('#fullscreenMenu').toggleClass('open');
+            });
 
-        // Close fullscreen menu when clicking close button
-        const closeBtn = document.querySelector('.close-btn');
-        closeBtn.addEventListener('click', toggleMenu);
+            // Close the fullscreen menu when clicking outside of it
+            $(document).mouseup(function(e) {
+                var container = $("#fullscreenMenu");
+                if (!container.is(e.target) && container.has(e.target).length === 0) {
+                    container.removeClass('open');
+                }
+            });
 
-        // Close fullscreen menu when clicking outside menu content
-        window.addEventListener('click', (e) => {
-            const menu = document.getElementById('fullscreenMenu');
-            if (e.target === menu) {
-                menu.classList.remove('open');
+            // Close the fullscreen menu when close button is clicked
+            $('.close-btn').click(function() {
+                $('#fullscreenMenu').removeClass('open');
+            });
+        });
+
+        const body = document.body;
+        const navbarBrand = document.querySelector('.navbar-brand');
+
+        navbarBrand.addEventListener('click', function() {
+            if (body.classList.contains('light-mode')) {
+                body.classList.remove('light-mode');
+                body.classList.add('dark-mode');
+            } else {
+                body.classList.remove('dark-mode');
+                body.classList.add('light-mode');
             }
         });
-    </script>
+
+
+
 </body>
 
 </html>
