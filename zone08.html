@@ -29,7 +29,7 @@
         
         .navbar,
         footer {
-            background-image: url('ll.jpg');
+            background-image: url('ff.jpg');
         }
         
         body {
@@ -93,7 +93,8 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0, 0, 0, 0.7);
+            background-image: url('ff.jpg');
+            /* Couleur de fond de secours */
             z-index: 1000;
             display: none;
             overflow-y: auto;
@@ -139,7 +140,7 @@
             left: 10px;
             color: #fff;
             font-size: 50px;
-            cursor: pointer;
+            cursor: pointer
         }
         
         .article {
@@ -208,7 +209,8 @@
         }
         
         footer {
-            color: #2100b6;
+            color: #ffffff;
+            background-image: url('ff.jpg');
             padding: 30px 0;
             text-align: center;
         }
@@ -260,7 +262,7 @@
         }
         
         .k {
-            font-size: 1.5rem;
+            font-size: 2.5rem;
             color: #333;
             text-align: center;
             margin-bottom: 10px;
@@ -311,6 +313,41 @@
         .button-container {
             text-align: center;
         }
+        
+        .fullscreen-menu-content ul li img {
+            width: 90px;
+            height: auto;
+            display: block;
+            margin-left: auto;
+            /* Aligne le logo à droite */
+        }
+        
+        .hero {
+            height: 50vh;
+            /* Height of the hero section */
+            position: relative;
+            overflow: hidden;
+            background-image: url('zzz.jpg');
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .hero-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 90%;
+            height: 90%;
+            background-image: url('ff.jpg');
+            /* Couleur de fond */
+            animation: backgroundAnimation 0s ease-out forwards;
+            z-index: -1;
+        }
     </style>
 </head>
 
@@ -334,15 +371,39 @@
         <span class="close-btn">&times;</span><br><br>
         <div class="fullscreen-menu-content">
             <ul>
+                <br><br><br><br>
                 <li><a href="inde.html">الصفحة الرئيسية</a></li>
-                <li><a href="news1.html">مركز الريحان للدروس الدعم</a></li>
-                <li><a href="first1.html">مدرسة الريحان للتكوين المهني</a></li>
-                <li><a href="reserve1.html">الطاقم الاداري</a></li>
-                <li><a href="histoir1.html">معلومات عنا</a></li>
-                <li><a href="contact1.html">تواصل معنا</a></li>
+                <li>
+                    <a href="news1.html">مركز الريحان للدروس الدعم </a>
+                </li>
+                <li>
+                    <a href="first1.html">مدرسة الريحان للتكوين المهني</a>
+                </li>
+                <li>
+                    <a href="reserve1.html">الطاقم الاداري</a>
+                </li>
+                <li>
+                    <a href="histoir1.html">معلومات عنا</a>
+                </li>
+                <li>
+                    <a href="contact1.html">تواصل معنا</a>
+                </li><br><br>
+                <li>
+                    <img src="rray.png" alt="MCA Logo">
+                </li>
             </ul>
         </div>
     </div>
+    <br>
+    <section class="hero">
+        <div class="hero-background"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                </div><br><br>
+            </div>
+        </div>
+    </section>
     <section class="news-section">
         <div class="container">
             <div class="row">
@@ -350,14 +411,12 @@
                     <h3>طور المتوسط</h3><br>
                     <article class="article">
                         <img src="1.jpg" alt="Article Image 1">
-                            <span class="close-btn">&times;</span>
                     </article>
                 </div>
                 <!-- Example Article 2 -->
                 <div class="col-lg-6">
                     <article class="article">
                         <img src="2.jpg" alt="Article Image 2">
-                            <span class="close-btn">&times;</span>
                     </article>
                 </div>
             </div>
@@ -365,95 +424,82 @@
             <div class="row">
                 <div class="col-lg-6">
                     <article class="article">
+
                         <img src="3.jpg" alt="Article Image 1">
-                            <span class="close-btn">&times;</span>
                     </article>
                 </div>
                 <div class="col-lg-6">
                     <article class="article">
+
                         <img src="4.jpg" alt="Article Image 1">
-                            <span class="close-btn">&times;</span>
                     </article>
                 </div>
             </div>
         </div>
-    </section>
-
-    <section class="news-section">
-        <div class="container">
-            <div class="row">
+        <div class="row">
+            <div class="col-lg-6">
                 <h3>طور الثانوي</h3><br><br>
                 <div class="col-lg-6">
                     <article class="article">
+
                         <img src="10.jpg" alt="Article Image 1">
-                            <span class="close-btn">&times;</span>
                     </article>
                 </div>
-                <!-- Example Article 2 -->
+
                 <div class="col-lg-6">
                     <article class="article">
                         <img src="11.jpg" alt="Article Image 2">
-                            <span class="close-btn">&times;</span>
                     </article>
                 </div>
-            </div>
-
-            <div class="row">
                 <div class="col-lg-6">
                     <article class="article">
                         <img src="12.jpg" alt="Article Image 1">
-                            <span class="close-btn">&times;</span>
                     </article>
                 </div>
                 <div class="col-lg-6">
                     <article class="article">
+
                         <img src="13.jpg" alt="Article Image 1">
-                            <span class="close-btn">&times;</span>
                     </article>
                 </div>
-            </div>
 
-            <div class="row">
                 <div class="col-lg-6">
                     <article class="article">
+
                         <img src="14.jpg" alt="Article Image 1">
-                            <span class="close-btn">&times;</span>
                     </article>
                 </div>
                 <div class="col-lg-6">
                     <article class="article">
+
                         <img src="15.jpg" alt="Article Image 1">
-                            <span class="close-btn">&times;</span>
                     </article>
                 </div>
-            </div>
 
-            <div class="row">
+
                 <div class="col-lg-6">
                     <article class="article">
+
                         <img src="16.jpg" alt="Article Image 1">
-                            <span class="close-btn">&times;</span>
                     </article>
                 </div>
                 <div class="col-lg-6">
                     <article class="article">
-                        <img src="17.jpg" alt="Article Image 1">
-                            <span class="close-btn">&times;</span>
-                    </article>
-                </div>
-            </div>
 
-            <div class="row">
+                        <img src="17.jpg" alt="Article Image 1">
+                    </article>
+                </div>
+
                 <div class="col-lg-6">
                     <article class="article">
+
                         <img src="18.jpg" alt="Article Image 1">
-                            <span class="close-btn">&times;</span>
                     </article>
                 </div>
                 <div class="col-lg-6">
                     <article class="article">
+
                         <img src="19.jpg" alt="Article Image 1">
-                            <span class="close-btn">&times;</span>
                     </article>
                 </div>
             </div>
@@ -481,14 +527,15 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <!-- Custom Script -->
-   <script>
-        // Toggle fullscreen menu
+    <script>
+        // Close the fullscreen menu when clicking outside of it or on close button
         $(document).ready(function() {
+            // Toggle fullscreen menu
             $('.navbar-toggler').click(function() {
                 $('#fullscreenMenu').toggleClass('open');
             });
 
-            // Close the fullscreen menu when clicking outside of it or on close button
+            // Close the fullscreen menu when clicking outside of it
             $(document).mouseup(function(e) {
                 var container = $("#fullscreenMenu");
                 if (!container.is(e.target) && container.has(e.target).length === 0) {
@@ -496,31 +543,32 @@
                 }
             });
 
+            // Close the fullscreen menu when close button is clicked
             $('.close-btn').click(function() {
                 $('#fullscreenMenu').removeClass('open');
             });
+        });
 
-            // Toggle dark mode
-            $('.navbar-brand').click(function() {
-                $('body').toggleClass('dark-mode');
+        // Toggle between light and dark mode
+        const body = document.body;
+        const navbarBrand = document.querySelector('.navbar-brand');
+
+        navbarBrand.addEventListener('click', function() {
+            body.classList.toggle('dark-mode');
+        });
+
+
+        // Image zoom functionality
+        const articles = document.querySelectorAll('.article');
+
+        articles.forEach(article => {
+            const img = article.querySelector('img');
+
+            img.addEventListener('click', function() {
+                article.classList.toggle('image-zoomed');
             });
 
-            // Image zoom functionality
-            const articles = document.querySelectorAll('.article');
-
-            articles.forEach(article => {
-                const img = article.querySelector('img');
-
-                img.addEventListener('click', function() {
-                    article.classList.toggle('image-zoomed');
-                });
-
-                const closeBtn = article.querySelector('.close-btn');
-
-                closeBtn.addEventListener('click', function() {
-                    article.classList.remove('image-zoomed');
-                });
-            });
+            // Supprimez les écouteurs d'événements de fermeture si nécessaire
         });
     </script>
 </body>
