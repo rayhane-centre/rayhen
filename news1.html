@@ -12,227 +12,327 @@
     <link href="https://fonts.googleapis.com/css2?family=Cairo&display=swap" rel="stylesheet">
     <style>
         /* Global styles */
-        
         /* Global styles */
-  /* Global styles */
-body {
-    font-family: 'Cairo', Arial, sans-serif;
-    background-color: #f8f9fa;
-    color: #000;
-    transition: background-color 0.5s, color 0.5s;
-}
-
-.navbar {
-    background-image: url('green.jpg');
-    /* Ajouté une image de fond pour la navbar */
-}
-
-.navbar-brand img {
-    width: 60px;
-    /* Taille du logo pour les écrans larges */
-}
-
-.navbar-dark .navbar-toggler {
-    border: none;
-    color: white;
-}
-
-.navbar-dark .navbar-toggler-icon {
-    color: white;
-    width: 24px;
-    height: 17px;
-}
-
-.navbar-dark .navbar-nav .nav-link {
-    color: #000;
-    padding: 10px 15px;
-    text-align: right;
-}
-
-.navbar-dark .navbar-nav .nav-link:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-}
-
-@media (max-width: 768px) {
-    .navbar-brand img {
-        width: 40px;
-    }
-}
-
-.hero {
-    background-color: white;
-    background-size: cover;
-    background-position: center;
-    color: #000;
-    text-align: center;
-    padding: 80px 0;
-}
-
-.fullscreen-menu {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    z-index: 1000;
-    display: none;
-    overflow-y: auto;
-}
-
-.fullscreen-menu.open {
-    display: block;
-}
-
-.fullscreen-menu-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-}
-
-.fullscreen-menu-content ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.fullscreen-menu-content ul li {
-    margin-bottom: 10px;
-}
-
-.fullscreen-menu-content ul li a {
-    color: #fff;
-    font-size: 24px;
-    text-decoration: none;
-    transition: color 0.3s;
-    display: block;
-    padding: 10px;
-}
-
-.fullscreen-menu-content ul li a:hover {
-    color: #ccc;
-}
-
-.close-btn {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    color: #fff;
-    font-size: 30px;
-    cursor: pointer;
-}
-
-.social-icons {
-    text-align: center;
-    margin-top: 20px;
-}
-
-.social-icons a {
-    font-size: 24px;
-    margin: 0 10px;
-    color: #343a40;
-    transition: color 0.3s;
-}
-
-.social-icons a:hover {
-    color: #dc3545;
-}
-
-.btn-primary {
-    background-color: #007bff;
-    border-color: #007bff;
-    color: #fff;
-    font-size: 1.1rem;
-    padding: 10px 20px;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
-
-.btn-primary:hover {
-    background-color: #0056b3;
-    border-color: #0056b3;
-}
-
-.btn-primary:focus {
-    box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5);
-}
-
-/* Dark Mode Styles */
-body.dark-mode {
-    background-color: #212529;
-    color: #fff;
-}
-
-body.dark-mode .navbar {
-    background-color: #212529;
-}
-
-body.dark-mode .navbar-dark .navbar-nav .nav-link {
-    color: #fff;
-}
-
-body.dark-mode .navbar-dark .navbar-nav .nav-link:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-}
-
-.match {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-}
-
-.center-container {
-    text-align: center;
-    margin-top: 20px;
-}
-
-.center-container k {
-    font-size: 1.5rem;
-    color: #333;
-    font-weight: bold;
-    margin-bottom: 10px;
-    display: block;
-}
-
-.news-section p {
-    color: #000;
-    font-size: 2.0rem;
-    line-height: 1.6;
-    text-align: right;
-    margin-bottom: 10px;
-}
-
-.photo-container {
-    width: 100%;
-    max-width: 600px;
-    margin: 0 auto;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.photo-container img {
-    display: block;
-    width: 100%;
-    height: auto;
-}
-
-@media (min-width: 576px) {
-    .photo-container {
-        max-width: 80%;
-    }
-}
-
-@media (max-width: 576px) {
-    .photo-container {
-        max-width: 100%;
-        border-radius: 0;
-    }
-}
-
+        /* Global styles */
+        
+        body {
+            font-family: 'Cairo', Arial, sans-serif;
+            background-color: #f8f9fa;
+            color: #000;
+            transition: background-color 0.5s, color 0.5s;
+        }
+        
+        .navbar {
+            background-image: url('ff.jpg');
+            /* Ajouté une image de fond pour la navbar */
+        }
+        
+        .navbar-brand img {
+            width: 60px;
+            /* Taille du logo pour les écrans larges */
+        }
+        
+        .navbar-dark .navbar-toggler {
+            border: none;
+            color: white;
+        }
+        
+        .navbar-dark .navbar-toggler-icon {
+            color: white;
+            width: 24px;
+            height: 17px;
+        }
+        
+        .navbar-dark .navbar-nav .nav-link {
+            color: #000;
+            padding: 10px 15px;
+            text-align: right;
+        }
+        
+        .navbar-dark .navbar-nav .nav-link:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        
+        @media (max-width: 768px) {
+            .navbar-brand img {
+                width: 40px;
+            }
+        }
+        
+        .hero {
+            background-color: white;
+            background-size: cover;
+            background-position: center;
+            color: #000;
+            text-align: center;
+            padding: 80px 0;
+        }
+        
+        .fullscreen-menu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('ff.jpg');
+            /* Couleur de fond de secours */
+            z-index: 1000;
+            display: none;
+            overflow-y: auto;
+        }
+        
+        .fullscreen-menu.open {
+            display: block;
+        }
+        
+        .fullscreen-menu-content {
+            position: absolute;
+            top: 6px;
+            right: 10px;
+            transform: translate(0, 0);
+            text-align: right;
+        }
+        
+        .fullscreen-menu-content ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        .fullscreen-menu-content ul li {
+            margin-bottom: 10px;
+        }
+        
+        .fullscreen-menu-content ul li a {
+            color: #fff;
+            font-size: 24px;
+            text-decoration: none;
+            transition: color 0.3s;
+            display: block;
+            padding: 10px;
+        }
+        
+        .fullscreen-menu-content ul li a:hover {
+            color: #ccc;
+        }
+        
+        .close-btn {
+            position: absolute;
+            top: 2px;
+            left: 10px;
+            color: #fff;
+            font-size: 50px;
+            cursor: pointer
+        }
+        
+        .social-icons {
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+        .social-icons a {
+            font-size: 24px;
+            margin: 0 10px;
+            color: #343a40;
+            transition: color 0.3s;
+        }
+        
+        .social-icons a:hover {
+            color: #dc3545;
+        }
+        
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+            color: #fff;
+            font-size: 1.1rem;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        
+        .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #0056b3;
+        }
+        
+        .btn-primary:focus {
+            box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5);
+        }
+        /* Dark Mode Styles */
+        
+        body.dark-mode {
+            background-color: #212529;
+            color: #fff;
+        }
+        
+        body.dark-mode .navbar {
+            background-color: #212529;
+        }
+        
+        body.dark-mode .navbar-dark .navbar-nav .nav-link {
+            color: #fff;
+        }
+        
+        body.dark-mode .navbar-dark .navbar-nav .nav-link:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        
+        .match {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .center-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+        .center-container k {
+            font-size: 1.5rem;
+            color: #333;
+            font-weight: bold;
+            margin-bottom: 10px;
+            display: block;
+        }
+        
+        .news-section p {
+            color: #000;
+            font-size: 2.0rem;
+            line-height: 1.6;
+            text-align: right;
+            margin-bottom: 10px;
+        }
+        
+        .photo-container {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .photo-container img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+        
+        @media (min-width: 576px) {
+            .photo-container {
+                max-width: 80%;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .photo-container {
+                max-width: 100%;
+                border-radius: 0;
+            }
+        }
+        
+        .fullscreen-menu-content ul li img {
+            width: 90px;
+            height: auto;
+            display: block;
+            margin-left: auto;
+            /* Aligne le logo à droite */
+        }
+        
+        footer {
+            color: #ffffff;
+            background-image: url('ff.jpg');
+            padding: 30px 0;
+            text-align: center;
+        }
+        
+        footer p {
+            margin-bottom: 0;
+        }
+        
+        .hero {
+            height: 70vh;
+            /* Height of the hero section */
+            position: relative;
+            overflow: hidden;
+            background-image: url('ff.jpg');
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .hero-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('ff.jpg');
+            /* Couleur de fond */
+            animation: backgroundAnimation 0s ease-out forwards;
+            z-index: -1;
+        }
+        
+        @keyframes backgroundAnimation {
+            0% {
+                width: 0%;
+                opacity: 0;
+            }
+            100% {
+                width: 100%;
+                opacity: 1;
+            }
+        }
+        
+        .hero h1 {
+            font-size: 3.0rem;
+            margin-bottom: 20px;
+        }
+        
+        .hero p {
+            font-size: 2.0rem;
+            margin-bottom: 30px;
+        }
+        
+        .animated-title {
+            opacity: 0;
+            transform: translateY(-50px);
+            animation: slideInTitle 1s ease forwards;
+        }
+        
+        @keyframes slideInTitle {
+            0% {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animated-text {
+            opacity: 0;
+            animation: fadeInText 1s ease forwards;
+        }
+        
+        @keyframes fadeInText {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
     </style>
 </head>
 
@@ -252,12 +352,13 @@ body.dark-mode .navbar-dark .navbar-nav .nav-link:hover {
         </nav>
     </header>
 
-   <!-- Fullscreen Menu -->
+    <!-- Fullscreen Menu -->
+    <!-- Fullscreen Menu -->
     <div class="fullscreen-menu" id="fullscreenMenu">
         <span class="close-btn">&times;</span><br><br>
         <div class="fullscreen-menu-content">
             <ul>
-                <br><br>
+                <br><br><br><br>
                 <li><a href="inde.html">الصفحة الرئيسية</a></li>
                 <li>
                     <a href="news1.html">مركز الريحان للدروس الدعم </a>
@@ -273,95 +374,100 @@ body.dark-mode .navbar-dark .navbar-nav .nav-link:hover {
                 </li>
                 <li>
                     <a href="contact1.html">تواصل معنا</a>
+                </li><br><br>
+                <li>
+                    <img src="rray.png" alt="MCA Logo">
                 </li>
             </ul>
         </div>
     </div>
- <br> <div class="photo-container">
-    <img src="ro.jpg" alt="Description of the photo">
-</div><br><br>
-
-  <section class="news-section">
-    <a href="zone08.html" class="section-link">
-        <div class="container">
-            <p>فرع المنطقة 08 : بجانب ثانوية أبي راس الناصري </p><br>
-            <section class="live-scores-section">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="match">
-                                <div class="map-container">
-                                    <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3252.2505787757464!2d0.1477383757751989!3d35.39903897267971!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzXCsDIzJzU2LjUiTiAwwrAwOScwMS4xIkU!5e0!3m2!1sfr!2sdz!4v1722816972861!5m2!1sfr!2sdz" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                                </div>
-                            </div> 
-                        </div>          
-                    </div>
-                </div>
-            </section>
-            <div class="center-container">
-                <k>:للاتصال، انقر على الرقم التالي<a href="tel:0795928687">0795928687</a></k>
-            </div>
-        </div>
-    </a>
-</section><br><br>
-
-<section class="news-section">
-    <a href="zone12.html" class="section-link">
-        <div class="container">
-            <p>فرع المنطقة 12 : طريق الجامعة سطمبولي </p><br>
-            <section class="live-scores-section">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="match">
-                                <div class="map-container">
-                                    <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3251.9236425699914!2d0.13302517577555012!3d35.407143172677!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzXCsDI0JzI1LjciTiAwwrAwOCcwOC4yIkU!5e0!3m2!1sfr!2sdz!4v1722817186874!5m2!1sfr!2sdz" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                                </div>
-                            </div> 
-                        </div>          
-                    </div>
-                </div>
-            </section>
-            <div class="center-container">
-                <k>:للاتصال، انقر على الرقم التالي<a href="tel:0770827996">0770827996</a></k>
-            </div>
-        </div>
-    </a>
-</section><br><br>
-
-<section class="news-section">
-    <a href="madb.html" class="section-link">
-        <div class="container">
-            <p>فرع مدبر : طريق وهران</p><br>
-            <section class="live-scores-section">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="match">
-                                <div class="map-container">
-                                    <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3251.9236425699914!2d0.13302517577555012!3d35.407143172677!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzXCsDI0JzI1LjciTiAwwrAwOCcwOC4yIkU!5e0!3m2!1sfr!2sdz!4v1722817527275!5m2!1sfr!2sdz" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                                </div>
-                            </div> 
-                        </div>          
-                    </div>
-                </div>
-            </section>
-              <div class="center-container">
-        <k>:للاتصال، انقر على الرقم التالي<a href="tel:0663818721">0663818721</a></k>
-    </div>
-            </div>
-        </div>
-    </section>
-    <section class="image-before-icons">
+    <br>
+    <section class="hero">
+        <div class="hero-background"></div>
         <div class="container">
             <div class="row">
-                <div class="col text-center">
-                    <img src="mca2.jpg" class="img-fluid" alt="Image Description">
+                <div class="col-md-12 text-center">
+                    <h1 class="display-4 animated-title">مركز الريحان</h1>
+                    <p class="lead animated-text">بكل فروعه يرحب بكم</p>
                 </div>
             </div>
         </div>
-    </section>
+    </section><br>
 
+    <section class="news-section">
+        <a href="zone08.html" class="section-link">
+            <div class="container">
+                <p>فرع المنطقة 08 : بجانب ثانوية أبي راس الناصري </p><br>
+                <section class="live-scores-section">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="match">
+                                    <div class="map-container">
+                                        <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3252.2505787757464!2d0.1477383757751989!3d35.39903897267971!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzXCsDIzJzU2LjUiTiAwwrAwOScwMS4xIkU!5e0!3m2!1sfr!2sdz!4v1722816972861!5m2!1sfr!2sdz"
+                                            width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <div class="center-container">
+                    <k>:للاتصال، انقر على الرقم التالي<a href="tel:0795928687">0795928687</a></k>
+                </div>
+            </div>
+        </a>
+    </section><br><br>
+
+    <section class="news-section">
+        <a href="zone12.html" class="section-link">
+            <div class="container">
+                <p>فرع المنطقة 12 : طريق الجامعة سطمبولي </p><br>
+                <section class="live-scores-section">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="match">
+                                    <div class="map-container">
+                                        <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3251.9236425699914!2d0.13302517577555012!3d35.407143172677!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzXCsDI0JzI1LjciTiAwwrAwOCcwOC4yIkU!5e0!3m2!1sfr!2sdz!4v1722817186874!5m2!1sfr!2sdz"
+                                            width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <div class="center-container">
+                    <k>:للاتصال، انقر على الرقم التالي<a href="tel:0770827996">0770827996</a></k>
+                </div>
+            </div>
+        </a>
+    </section><br><br>
+
+    <section class="news-section">
+        <a href="madb.html" class="section-link">
+            <div class="container">
+                <p>فرع مدبر : طريق وهران</p><br>
+                <section class="live-scores-section">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="match">
+                                    <div class="map-container">
+                                        <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3251.9236425699914!2d0.13302517577555012!3d35.407143172677!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzXCsDI0JzI1LjciTiAwwrAwOCcwOC4yIkU!5e0!3m2!1sfr!2sdz!4v1722817527275!5m2!1sfr!2sdz"
+                                            width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <div class="center-container">
+                    <k>:للاتصال، انقر على الرقم التالي<a href="tel:0663818721">0663818721</a></k>
+                </div>
+            </div>
+            </div>
+    </section>
     <section class="social-icons">
         <div class="container">
             <a href="https://www.facebook.com/mouloudianiyouten.21.mca/?locale=fr_FR" target="_blank"><i class="fab fa-facebook-square"></i></a>
@@ -370,10 +476,9 @@ body.dark-mode .navbar-dark .navbar-nav .nav-link:hover {
         </div>
     </section>
 
-
     <!-- Footer Section -->
     <footer class="text-center py-4">
-        <c>&copy; 2024 Mouloudia Actualités. جميع الحقوق محفوظة.<c/>
+        <p>. جميع الحقوق محفوظة&copy; </p>
     </footer>
 
     <!-- Bootstrap JS and dependencies -->
@@ -382,6 +487,7 @@ body.dark-mode .navbar-dark .navbar-nav .nav-link:hover {
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <!-- Dark Mode Toggle Script -->
     <script>
+        // Close the fullscreen menu when clicking outside of it or on close button
         $(document).ready(function() {
             // Toggle fullscreen menu
             $('.navbar-toggler').click(function() {
@@ -402,21 +508,14 @@ body.dark-mode .navbar-dark .navbar-nav .nav-link:hover {
             });
         });
 
+        // Toggle between light and dark mode
         const body = document.body;
         const navbarBrand = document.querySelector('.navbar-brand');
 
         navbarBrand.addEventListener('click', function() {
-            if (body.classList.contains('light-mode')) {
-                body.classList.remove('light-mode');
-                body.classList.add('dark-mode');
-            } else {
-                body.classList.remove('dark-mode');
-                body.classList.add('light-mode');
-            }
+            body.classList.toggle('dark-mode');
         });
-
-
-
+    </script>
 </body>
 
 </html>
