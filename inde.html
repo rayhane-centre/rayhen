@@ -36,7 +36,7 @@
         /* Navbar Styles */
         
         .navbar {
-            background-image: url('https://media.adeo.com/media/1548719/media.jpg?width=650&height=650&format=jpg&quality=80&fit=bounds');
+            background-image: url('ff.jpg');
         }
         
         .navbar-brand img {
@@ -74,31 +74,23 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0, 0, 0, 0.7);
-            /* Semi-transparent black background */
+            background-image: url('ff.jpg');
+            /* Couleur de fond de secours */
             z-index: 1000;
-            /* Ensure it's above other content */
             display: none;
-            /* Initially hidden */
             overflow-y: auto;
-            /* Enable scrolling */
         }
         
         .fullscreen-menu.open {
             display: block;
-            /* Display when open */
         }
         
         .fullscreen-menu-content {
             position: absolute;
             top: 6px;
-            /* Adjust as needed */
             right: 10px;
-            /* Adjust as needed */
             transform: translate(0, 0);
-            /* Adjust as needed */
             text-align: right;
-            /* Right-align text */
         }
         
         .fullscreen-menu-content ul {
@@ -126,14 +118,10 @@
         .close-btn {
             position: absolute;
             top: 2px;
-            /* Adjust as needed */
             left: 10px;
-            /* Adjust to position close button */
             color: #fff;
-            /* Button text color */
             font-size: 50px;
-            /* Button font size */
-            cursor: pointer;
+            cursor: pointer
         }
         /* Responsive Design and Dark Mode */
         
@@ -167,10 +155,10 @@
             /* Height of the hero section */
             position: relative;
             overflow: hidden;
-            background-image: url('https://media.adeo.com/media/1548719/media.jpg?width=650&height=650&format=jpg&quality=80&fit=bounds');
+            background-image: url('ff.jpg');
             background-size: cover;
             background-position: center;
-            color: #fae525;
+            color: #fff;
             text-align: center;
             display: flex;
             justify-content: center;
@@ -183,7 +171,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-image: url('https://media.adeo.com/media/1548719/media.jpg?width=650&height=650&format=jpg&quality=80&fit=bounds');
+            background-image: url('ff.jpg');
             background-size: cover;
             z-index: -1;
         }
@@ -230,7 +218,7 @@
         /* Authors Section */
         
         .authors-section {
-            background-image: url('https://w0.peakpx.com/wallpaper/296/71/HD-wallpaper-skyblue-background-colors-edge-galaxy-gradient-note-plain-simple-sky.jpg');
+            background-image: url('ff.jpg');
             color: black;
             padding: 50px 0;
         }
@@ -263,7 +251,7 @@
         
         @media (max-width: 768px) {
             .authors-section {
-                background-image: url('ll.jpg');
+                background-image: url('ff.jpg');
                 color: #fff;
                 padding: 50px 0;
             }
@@ -314,10 +302,10 @@
         /* Footer Section */
         
         footer {
-            color: #fae525;
+            color: #fff;
             padding: 30px 0;
             text-align: center;
-            background-image: url('https://media.adeo.com/media/1548719/media.jpg?width=650&height=650&format=jpg&quality=80&fit=bounds');
+            background-image: url('ff.jpg');
         }
         
         footer p {
@@ -378,6 +366,14 @@
             color: #343a40;
             transition: color 0.3s;
         }
+        
+        .fullscreen-menu-content ul li img {
+            width: 90px;
+            height: auto;
+            display: block;
+            margin-left: auto;
+            /* Aligne le logo à droite */
+        }
     </style>
 </head>
 
@@ -400,8 +396,8 @@
         <span class="close-btn">&times;</span><br><br>
         <div class="fullscreen-menu-content">
             <ul>
-                <br><br>
-                <li><a href="index.html">الصفحة الرئيسية</a></li>
+                <br><br><br><br>
+                <li><a href="inde.html">الصفحة الرئيسية</a></li>
                 <li>
                     <a href="news1.html">مركز الريحان للدروس الدعم </a>
                 </li>
@@ -416,10 +412,14 @@
                 </li>
                 <li>
                     <a href="contact1.html">تواصل معنا</a>
+                </li><br><br>
+                <li>
+                    <img src="rray.png" alt="MCA Logo">
                 </li>
             </ul>
         </div>
-    </div><br>
+    </div>
+    <br>
     <section class="hero">
         <div class="hero-background"></div>
         <div class="container">
@@ -437,29 +437,38 @@
         <div class="container">
             <div class="row">
                 <div class="col text-center">
-                    <img src="zzz.jpg" class="img-fluid" alt="Image Description">
+                    <a href="zone08.html">
+                        <img src="zzz.jpg" class="img-fluid" alt="Image Description">
+                    </a>
                 </div>
             </div>
         </div>
-    </section><br>
+    </section>
+    <br>
     <section class="image-before-icons">
         <div class="container">
             <div class="row">
                 <div class="col text-center">
-                    <img src="mmm.jpg" class="img-fluid" alt="Image Description">
+                    <a href="zone12.html">
+                        <img src="ddd.jpg" class="img-fluid" alt="Image Description">
+                    </a>
                 </div>
             </div>
         </div>
-    </section><br>
+    </section>
+    <br>
     <section class="image-before-icons">
         <div class="container">
             <div class="row">
                 <div class="col text-center">
-                    <img src="ddd.jpg" class="img-fluid" alt="Image Description">
+                    <a href="madb.html">
+                        <img src="mmm.jpg" class="img-fluid" alt="Image Description">
+                    </a>
                 </div>
             </div>
         </div>
-    </section><br>
+    </section>
+    <br>
 
 
     <section class="live-scores-section">
